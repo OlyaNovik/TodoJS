@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+@mixin button() {
+    width: fit-content;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;    
+}
+
+$color_border:rgb(241, 198, 205);
+.main_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    margin-top: 50px;
+    color: pink;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+.container_list{
+    margin-top: 20px;
+    padding: 20px;
+    width: 600px;
+    height: 400px;
+    border: 2px solid $color_border;
+    box-shadow: rgba(109, 68, 68, 0.35) 0px 5px 15px;
+}
+
+.enter_field{
+    display: flex;
+    .btn{
+        @include button();
+    }
+    .btn:focus{
+        text-decoration:underline;
+   }
+}
+
+#enter_list{
+    width: 100%;
+    height: 60px;
+    // padding-left: 15px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid $color_border;
+}
+#enter_list:focus{
+    border: none;
+    border-bottom: 2px solid $color_border;
+    outline: none;
+}
+
+
+.main_do{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    #empty{
+        font-size: 30px;
+        margin: 0px 0 0 160px;
+    }
+}
+
+
+.footer_list{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    .number_items{
+        display: flex;
+    p{
+        margin-right: 3px;
+    } }
+    .list_btn{
+        width: 200px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn{
+        @include button();
+    }
+}
+
+#clear_btn{
+    display: none;
+}
+
+.bottom_block{
+    width: 630px;
+    height: 3px;
+    margin: 0 3px 0 3px;
+    background: white;
+    border: 2px solid $color_border;
+}
+
+.bottom_block_two{
+    width: 620px;
+    height: 2px;
+    margin: 0 4px 0 4px;
+    background: white;
+    border: 2px solid $color_border;
+}
+
+.block_list{
+    display: flex;
+    justify-content: space-between;
+.inline_task{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    p{
+        font-size: 18px;
+    
+    }
+}
+}
+
+
+.check_block{
+    border: 1px solid black;
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+    padding: 7px;
+    border-radius: 50%;
+}
+#check_img{
+    pointer-events: none;
+    width: 18px;
+    height: 19px;
+    fill: green;
+    align-self: center;
+}
+
+.delete_task{
+    align-self: center;
+    width: 18px;
+    height: 18px;
+}
+
+#delete_svg{
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+}
+
+.button_click{
+    outline: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
